@@ -3,9 +3,8 @@
 import time
 import datetime
 
-
-def date2Timestamp(date, format):
-    date = time.strptime(str(date), format)
+def date2Timestamp(date, f):
+    date = time.strptime(str(date), f)
     timestamp = int(time.mktime(date))
 
     return timestamp
@@ -17,7 +16,7 @@ def getTimeStamp():
 
 
 def years2Timestamp(years):
-    times = years * 365 * 24 * 60 * 60 * 1000
+    times = years * 365 * 24 * 60 * 60
     return times
 
 
@@ -29,3 +28,15 @@ def getCurrentQuarter():
     now = datetime.datetime.now()
     quarter = now.month / 3 if now.month % 3 == 0 else now.month / 3 + 1
     return quarter
+
+def getLastWeekDay():
+    now = datetime.date.today()
+
+    if now.isoweekday() == 1:
+        dayStep = 3
+    else:
+        dayStep = 1
+
+    lastWeekDay = now - datetime.timedelta(days=dayStep)
+
+    return lastWeekDay

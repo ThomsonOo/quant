@@ -19,12 +19,12 @@ if __name__ == "__main__":
             if quarter <= 0:
                 break
 
-            print "query %s year %s quarter reports..." % (year, quarter)
+            print("query %s year %s quarter reports..." % (year, quarter))
             reports = getReport(year, quarter)
 
             fileName = "%s_%s_profit_data.csv"%(year,quarter)
 
-            print "save %s year %s quarter reports to: %s"%(year,quarter,fileName)
+            print("save %s year %s quarter reports to: %s"%(year,quarter,fileName))
 
             reports.to_csv(fileName, encoding="gbk", index=False)
 
