@@ -4,6 +4,7 @@
 积极型策略：
     pe <= 9
     创办时间>5年
+    持续5年盈利
 '''
 
 from base.stock import getAStocks
@@ -19,14 +20,14 @@ def positiveFilter(stocks):
 
     stocks = foundingTimeFilter(stocks, POSITIVE_FOUNDING_TIME_LIMIT)
 
-    # stocks = profitFilter(stocks,POSITIVE_PROFIT_YEAR_LIMIT)
+    stocks = profitFilter(stocks,POSITIVE_PROFIT_YEAR_LIMIT)
 
     return stocks
 
 
 if __name__ == "__main__":
 
-    stocks = getAStocks(getLastWeekDay())
+    stocks = getAStocks('2020-03-23')
 
     stocks = positiveFilter(stocks)
 

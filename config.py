@@ -9,6 +9,7 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 DEBUG_CACHE_DIR = PROJECT_PATH + "/cache/"
 DEBUG_REPORT_CACHE = True
 DEBUG_STOCK_CACHE = True
+DEBUG_PROFIT_CACHE = True
 
 
 DEBUG_TOKEN = "2b7f0ba55706b4221cd2319225bcc398100673c587e665ab036b44bd"

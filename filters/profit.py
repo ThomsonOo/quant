@@ -1,53 +1,56 @@
 # coding:utf8
 
-from base.report import getReport
 from utils.timeutil import getCurrentYear, getCurrentQuarter
 
 from base.stock import getAStocks
-
+from base.profit import getProfit
+from utils.timeutil import getLastWeekDay
 
 # 持续盈利过滤
 def profitFilter(stocks, years):
     currentYear = getCurrentYear()
     currentQuarter = getCurrentQuarter()
 
+    loss = dict()
+
     for i in range(0, years):
         year = currentYear - i
 
         quarters = 4 if year != currentYear else currentQuarter - 1  # 当年只查询到上一季度，往年查4个季度
 
-        for j in range(0, quarters):
+        for j in range(0, int(quarters)):
             quarter = j + 1
 
             if quarter <= 0:
                 break
 
-            print("query %s year %s quarter reports..." % (year, quarter))
-            reports = getReport(year, quarter)
+            for index, stock in stocks.iterrows():
 
-            for code, stock in stocks.iterrows():
-                notReport = True  # 未发财报
+                print("query %s year %s quarter profit..." % (year, quarter))
 
-                notProfit = False  # 未盈利
+                code = stock['symbol']
+                area = "sz" if stock['ts_code'].find("SZ") > 0 else 'sh'
+                code = area + "." + code
 
-                for index, report in reports.iterrows():
-                    if report['code'] == str(code):
-                        notReport = False
-                        if report['net_profits'] < 0:
-                            notProfit = True
-                        break
+                profit = getProfit(code, year, quarter)
+                try:
+                    netProfit = float(profit['netProfit'])
+                except:
+                    if loss[code] == None:
+                        loss[code] = 1
+                    else:
+                        loss[code] = loss[code] + 1
+                    netProfit = 0 # 未找到对应数据
 
-                if notReport:
-                    print(stock['name'], "%s year %s quarter has not report" % (year, quarter))
+                if netProfit < 0:
+                    print(stock['name'], "%s year %s quarter net profit < 0" % (year, quarter))
+                    stocks.drop(index, inplace=True)
 
-                if notProfit:
-                    print(stock['name'], "%s year %s quarter has not profit" % (year, quarter))
-                    stocks.drop(code, inplace=True)
-
+            print(loss)
     return stocks
 
 
 if __name__ == '__main__':
-    stocks = getAStocks()
+    stocks = getAStocks(getLastWeekDay())
 
     profitFilter(stocks, 5)
