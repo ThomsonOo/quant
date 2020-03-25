@@ -6,6 +6,7 @@ from base.stock import getAStocks
 from base.profit import getProfit
 from utils.timeutil import getLastWeekDay
 
+
 # 持续盈利过滤
 def profitFilter(stocks, years):
     currentYear = getCurrentYear()
@@ -33,14 +34,23 @@ def profitFilter(stocks, years):
                 code = area + "." + code
 
                 profit = getProfit(code, year, quarter)
-                try:
-                    netProfit = float(profit['netProfit'])
-                except:
-                    if loss[code] == None:
-                        loss[code] = 1
-                    else:
+
+                if profit is not None:
+                    try:
+                        netProfit = float(profit['netProfit'])
+                    except Exception:
+                        netProfit = 0  # 未找到对应数据
+                else:
+                    netProfit = 0
+
+
+                if netProfit == 0:
+                    print("=======loss %s profit========"%code)
+                    try:
                         loss[code] = loss[code] + 1
-                    netProfit = 0 # 未找到对应数据
+                    except:
+                        loss[code] = 1
+
 
                 if netProfit < 0:
                     print(stock['name'], "%s year %s quarter net profit < 0" % (year, quarter))
