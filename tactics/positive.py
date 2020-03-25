@@ -5,13 +5,17 @@
     pe <= 9
     创办时间>5年
     持续5年盈利
+    去年利润大于5年前同期利润
+
 '''
 
 from base.stock import getAStocks
-from config import POSITIVE_PE_LIMIT, POSITIVE_FOUNDING_TIME_LIMIT,POSITIVE_PROFIT_YEAR_LIMIT
+from config import POSITIVE_PE_LIMIT, POSITIVE_FOUNDING_TIME_LIMIT,POSITIVE_PROFIT_YEAR_LIMIT,POSITIVE_GROW_YEAR_LIMIT
 from filters.founding_time import foundingTimeFilter
 from filters.pe import peFilter
 from filters.profit import profitFilter
+from filters.grow import growFilter
+
 from utils.timeutil import getLastWeekDay
 
 def positiveFilter(stocks):
@@ -21,6 +25,8 @@ def positiveFilter(stocks):
     stocks = foundingTimeFilter(stocks, POSITIVE_FOUNDING_TIME_LIMIT)
 
     stocks = profitFilter(stocks,POSITIVE_PROFIT_YEAR_LIMIT)
+
+    stocks = growFilter(stocks,POSITIVE_GROW_YEAR_LIMIT)
 
     return stocks
 

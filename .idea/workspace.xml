@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23f13146-84d0-4afd-9cdd-263a9b2c05e9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/filters/grow.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/filters/profit.py" afterPath="$PROJECT_DIR$/filters/profit.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tactics/positive.py" afterPath="$PROJECT_DIR$/tactics/positive.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +19,8 @@
       <file leaf-file-name="profit.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/filters/profit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="302">
+              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="56" selection-end-column="52" />
               <folding>
                 <element signature="e#15#75#0" expanded="true" />
               </folding>
@@ -26,11 +28,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profit.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="grow.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/filters/grow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="67" column="17" lean-forward="false" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+              <folding>
+                <element signature="e#15#75#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profit.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/base/profit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="93">
+              <caret line="22" column="55" lean-forward="true" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
               <folding>
                 <element signature="e#15#36#0" expanded="true" />
               </folding>
@@ -41,11 +55,21 @@
       <file leaf-file-name="positive.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tactics/positive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="124">
+              <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
               <folding>
-                <element signature="e#66#99#0" expanded="true" />
+                <element signature="e#85#118#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,10 +108,11 @@
         <option value="$PROJECT_DIR$/utils/timeutil.py" />
         <option value="$PROJECT_DIR$/filters/founding_time.py" />
         <option value="$PROJECT_DIR$/cache/profit.py" />
-        <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/tactics/positive.py" />
         <option value="$PROJECT_DIR$/filters/profit.py" />
         <option value="$PROJECT_DIR$/base/profit.py" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/tactics/positive.py" />
+        <option value="$PROJECT_DIR$/filters/grow.py" />
       </list>
     </option>
   </component>
@@ -185,6 +210,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="quant" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="grow_filter" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/3.8/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/filters" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="quant" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/filters/grow.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -342,17 +384,18 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="10">
+    <list size="11">
       <item index="0" class="java.lang.String" itemvalue="Python.stock_list" />
       <item index="1" class="java.lang.String" itemvalue="Python.stock_cache" />
       <item index="2" class="java.lang.String" itemvalue="Python.low_pe_stocks" />
       <item index="3" class="java.lang.String" itemvalue="Python.main" />
       <item index="4" class="java.lang.String" itemvalue="Python.report_cache" />
       <item index="5" class="java.lang.String" itemvalue="Python.positive" />
-      <item index="6" class="java.lang.String" itemvalue="Python.profit_list" />
-      <item index="7" class="java.lang.String" itemvalue="Python.profit_filter" />
-      <item index="8" class="java.lang.String" itemvalue="Python.profit_cache" />
-      <item index="9" class="java.lang.String" itemvalue="Python.config" />
+      <item index="6" class="java.lang.String" itemvalue="Python.grow_filter" />
+      <item index="7" class="java.lang.String" itemvalue="Python.profit_list" />
+      <item index="8" class="java.lang.String" itemvalue="Python.profit_filter" />
+      <item index="9" class="java.lang.String" itemvalue="Python.profit_cache" />
+      <item index="10" class="java.lang.String" itemvalue="Python.config" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -381,7 +424,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36176065" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3314993" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -406,13 +449,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Python/2.7/site-packages/tushare/pro/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="44" column="33" lean-forward="true" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2017.2/python_stubs/348993582/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -456,7 +492,7 @@
         <state relative-caret-position="383">
           <caret line="34" column="70" lean-forward="false" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
           <folding>
-            <element signature="e#66#99#0" expanded="true" />
+            <element signature="e#85#118#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -634,13 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2017.2/python_stubs/103838517/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="357" column="70" lean-forward="true" selection-start-line="357" selection-start-column="70" selection-end-line="357" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/_strptime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5130">
@@ -678,14 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -770,32 +791,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tactics/positive.py">
+    <entry file="file://$PROJECT_DIR$/base/profit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="93">
+          <caret line="22" column="55" lean-forward="true" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
           <folding>
-            <element signature="e#66#99#0" expanded="true" />
+            <element signature="e#15#36#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2017.2/python_stubs/103838517/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="4274" column="19" lean-forward="false" selection-start-line="4274" selection-start-column="19" selection-end-line="4274" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/filters/profit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="302">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="56" selection-end-column="52" />
           <folding>
             <element signature="e#15#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/profit.py">
+    <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="367">
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tactics/positive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
           <folding>
-            <element signature="e#15#36#0" expanded="true" />
+            <element signature="e#85#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filters/grow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="67" column="17" lean-forward="false" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+          <folding>
+            <element signature="e#15#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
