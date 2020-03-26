@@ -22,6 +22,7 @@ DEFENSIVE_PB_LIMIT = 1.2 #防御型策略 - 市净率率指标
 DEFENSIVE_FOUNDING_TIME_LIMIT = 10 #防御型策略 - 创办时长指标
 DEFENSIVE_PROFIT_YEAR_LIMIT = 5 #防御型策略 - 持续盈利时长指标
 DEFENSIVE_GROW_YEAR_LIMIT = 5 #防御型策略 - 盈利增长对比时间时长指标
+DEFENSIVE_RATIO_LIMIT = 1.5 #防御型策略 - 流动比率指标
 
 
 #积极型策略配置
@@ -30,6 +31,8 @@ POSITIVE_PB_LIMIT = 1.2 #积极型策略 - 市净率指标
 POSITIVE_FOUNDING_TIME_LIMIT = 5 #积极型策略 - 创办时长指标
 POSITIVE_PROFIT_YEAR_LIMIT = 5 #积极型策略 - 持续盈利时长指标
 POSITIVE_GROW_YEAR_LIMIT = 5 #积极型策略 - 盈利增长对比时间时长指标
+POSITIVE_RATIO_LIMIT = 1.5 #防御型策略 - 流动比率指标
+
 
 
 
