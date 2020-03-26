@@ -51,12 +51,15 @@ def getAStocks(day):
                                                   "peTTM,pbMRQ,psTTM,pcfNcfTTM",
                                                   start_date=str(day), end_date=str(day),
                                                   frequency="d", adjustflag="3")
-                if rs.error_code == '0':
-                    data = rs.get_row_data()
-                    stock['peTTM'] = data[0]
-                    stock['pbMRQ'] = data[1]
-                    stock['psTTM'] = data[2]
-                    stock['pcfNcfTTM'] = data[3]
+                try:
+                    if rs.error_code == '0':
+                        data = rs.get_row_data()
+                        stock['peTTM'] = data[0]
+                        stock['pbMRQ'] = data[1]
+                        stock['psTTM'] = data[2]
+                        stock['pcfNcfTTM'] = data[3]
+                except:
+                    pass
 
         bs.logout()
 
